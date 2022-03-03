@@ -40,7 +40,7 @@ echo "JENKINS_ADMIN_ID=admin" >> .env
 echo "JENKINS_ADMIN_PASSWORD=password" >> .env
 
 # run docker-compose to build and run jenkins in background
-docker-compose up --build -d
+docker compose up --build -d
 ```
 Jenkins server now accessible here `http://localhost:8080` (_as per [.env](.env) values._)
 
