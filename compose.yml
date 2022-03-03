@@ -11,7 +11,7 @@ services:
     image: docker:dind
     command: --storage-driver=overlay2
     ports:
-      - "2376:2376"
+      - "12376:2376"
     privileged: true
     environment:
       - DOCKER_TLS_CERTDIR=/certs
@@ -36,7 +36,7 @@ services:
     env_file: .env
     environment:
       - JENKINS_PORT=${JENKINS_PORT}
-      - DOCKER_HOST=tcp://docker:2376
+      - DOCKER_HOST=tcp://docker:12376
       - DOCKER_CERT_PATH=/certs/client
       - DOCKER_TLS_VERIFY=1
     networks:

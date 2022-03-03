@@ -6,7 +6,7 @@ Basic Jenkins server with default plugins installed. The list of the plugins is 
 A [.env](.env) file is <b>required</b> with these values inside: 
 ```
 JENKINS_HOSTNAME=localhost
-JENKINS_PORT=8080
+JENKINS_PORT=18080
 JENKINS_ADMIN_ID=admin
 JENKINS_ADMIN_PASSWORD=password
 ```
@@ -35,14 +35,15 @@ touch .env
 
 # Add variables to the .env file
 echo "JENKINS_HOSTNAME=localhost" >> .env
-echo "JENKINS_PORT=8080" >> .env
+echo "JENKINS_PORT=18080" >> .env
 echo "JENKINS_ADMIN_ID=admin" >> .env
 echo "JENKINS_ADMIN_PASSWORD=password" >> .env
 
 # run docker-compose to build and run jenkins in background
 docker compose up --build -d
 ```
-Jenkins server now accessible here `http://localhost:8080` (_as per [.env](.env) values._)
+Jenkins server now accessible here `http://localhost:18080` (_as per [.env](.env) values._)
+Jenkins `user` and `password` is defined in the previouly created `.env` file.
 
 Note:
 This build uses the Docker in Docker `docker:dind` image
