@@ -21,7 +21,7 @@ The provided [casc.yaml](casc.yaml) includes basic configuration such as:
 - A build authorization strategy; all jobs configured or triggered can be run just by the Jenkins user that created them.
 - Enabling Agent to Controller Access Control
 
-To run this Jenkins server:
+To run Jenkins server:
 
 ```bash
 # Clone the repo
@@ -42,8 +42,15 @@ echo "JENKINS_ADMIN_PASSWORD=password" >> .env
 # run docker-compose to build and run jenkins in background
 docker compose up --build -d
 ```
+
 Jenkins server now accessible here `http://localhost:18080` (_as per [.env](.env) values._)
 Jenkins `user` and `password` is defined in the previouly created `.env` file.
+
+To stop Jenkins server:
+
+```bash
+docker compose down
+```
 
 Note:
 This build uses the Docker in Docker `docker:dind` image
